@@ -1,96 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoverboard</title>
-
-    <style>
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-            margin: 0;
-        }
-
-        .container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 400px;
-        }
-
-        .square{
-            background-color: black;
-            box-shadow: 0 0 2px black;
-            height: 16px;
-            width: 16px;
-            margin: 2px;
-            transition: 2s ease;
-        }
-
-        .square:hover{
-            transition-duration: 0s;
-        }
-
-
-
-
-    </style>
-
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home — Anna Fashion Brand</title>
 </head>
+
 <body>
+    <header>
+        <h1>Fashion Brand</h1>
+        <nav> <h1><a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            </h1>
+        </nav>
+    </header>
+    <main>
+        <section class="hero"> <img src="fashion-advertising-web-banner-illustration-vector.jpg"  alt="Banner">
+        </section>
+        <section class="collections">
+            <h2>Featured Collections</h2>
+            <div class="grid"> <img src="maxresdefault.jpg" alt="">
 
-    <div class="contain er" id="container">
-
-    </div>
-
-    <script>
-        const container = document.getElementById("container");
-        const colors = ["#e74c3c" , "#8e44ad" , "#3498db" , "#e67e22" , "#2ecc71"];
-        const SQUARES = 300;
-
-        for(let i = 0; i < SQUARES; i++){
-            const square = document.createElement("div");
-            square.classList.add("square");
-
-            square.addEventListener("mouseover", () => setColor(square));
-
-            square.addEventListener("mouseout", () => removeColor(square));
-
-            container.appendChild(square);
-
-        }
-
-        function setColor(element) {
-            const color = getRAndomColor();
-            element.style.background = color;
-            element.style.boxShadow = `10 0 2px ${color},0 0 10px ${color}`;
-
-            function removeColor(element) {
-                element.style.background = "#1d1d1d";
-                element.style.boxShadow = "0 0 2px #000";
-            }
-
-            function getRandomColor() {
-                return colors[Math.floor(Math.random() * colors.length)];
-            }
-        }
-
-
-
-
-
-
-    </script>
-
-
-
-
-    
+            </div>
+        </section>
+    </main>
+    <footer>&copy; 2025 Fashion Brand</footer>
 </body>
+
 </html>

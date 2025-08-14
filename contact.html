@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>…</header>
+    <main>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required> <br> <br>
+                <input type="email" id="email" placeholder="Email" required><br> <br>
+                <input type="text" id="email" placeholder="address" required><br> <br>
+                <input type="phone" id="email" placeholder="phone number" required><br> <br>
+                <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formMsg"></p>
+        </section>
+    </main>
+    <footer>
+    <p>© 2025 Anna clothing brand. All rights reserved.</p>
+  </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formMsg').textContent = 'Thank you, your message has been sent!';
+        });
+    </script>
+</body>
+
+</html>
